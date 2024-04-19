@@ -14,10 +14,12 @@ public void NegativeIdentityTests()
     Assert.IsFalse(HasNegativeIdentity(1)); // 1 != -1  
     Assert.IsFalse(HasNegativeIdentity(-5)); // -5 != 5
 
-    // wat?
     Assert.IsFalse(HasNegativeIdentity(Int32.MaxValue)); // 2147483647 != -2147483647
-    Asssert.IsTrue(HasNegativeIdentity(Int32.MinValue)); // 2147483648 == -2147483648 (waaat??)
+    
+    // wat?
+    Asssert.IsTrue(HasNegativeIdentity(Int32.MinValue)); // -2147483648 == -(-2147483648) (waaat??)
 
+    // waaaat?
     int val = Int32.MinValue;
     Assert.IsTrue(val != 0 && HasNegativeIdentity(val)); // incorrect in reality
     // phenomena of 2's complement
