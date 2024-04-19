@@ -13,4 +13,7 @@ public static void FloatingPointAccumulationErrors()
     // mathematically, this should not be the case.
     // but in compupter world, we have floating-point accumulation errors
     Assert.IsTrue(oneMultiply != oneLoop);
+
+    // oneMultiply := 1.0
+    // oneLoop := 0.9999999 or := 1.0000001, depending on processor architecture
 }
