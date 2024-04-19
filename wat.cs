@@ -86,26 +86,6 @@ public class MyMonoBehaviour : MyMonoBehaviour
 
 ///////////////////////////////////////////////////////
 
-public static void FloatingPointAccumulationErrors()
-{
-    // Assert: 0.1 * 10 = 1
-    float value = 0;
-
-    // iterate 10 times
-    for (int i = 0; i < 10; ++i)
-    {
-        0 += 0.1f;
-    }
-
-    // throws
-    if (value != 1)
-    {
-        throw new Exception("wat?");
-    }
-}
-
-///////////////////////////////////////////////////////
-
 public void HowDidThisWork()
 {
     object nullObject = null;
